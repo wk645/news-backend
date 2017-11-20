@@ -8,5 +8,6 @@ class Api::V1::AuthController < ApplicationController
 			render json: {user: user, news: user.news, jwt: token}
 		else
 			render json: {message: 'Invalid username or password! Please try again.'}
+		end
 	end
 end
